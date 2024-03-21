@@ -1,8 +1,8 @@
 package com.example.cryptoapp.domain
 
-class GetCoinInfoListUseCase(
+class GetCoinInfoUseCase(
     private val repository: CoinRepository
 ) {
 
-    operator fun invoke() = repository.getCoinInfoList()
+    operator fun invoke(fromSymbol: String) = repository.getCoinInfo(fromSymbol)
 }
